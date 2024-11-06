@@ -8,13 +8,8 @@ body
 
 body
     margin: 0
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    // background: $dark-color
-    // font-family: $lato
-    // color: $main-color
+    overflow: hidden
+    font-family: $comfortaa, sans-serif
 
 *
     box-sizing: border-box
@@ -31,26 +26,39 @@ button
 h1, h2, h3, h4
     margin: 0
     font-weight: normal
+    text-align: center
 
-img
-    width: auto
+small
+    display: block
+    margin-bottom: 20px
+    text-align: center
+
+.fa-heart
+    color: red
+
+.love__me
+    position: relative
+    border: 3px solid grey
+    height: 500px
+    width: 500px
     max-width: 100%
-    height: auto
+    margin: auto
+    background: url('https://i.postimg.cc/44D5txng/anime-03.png')
+    background-size: cover
+    background-position: top center
+    background-repeat: no-repeat
+    cursor: pointer
+    transition: transform 0.3s ease
+    box-shadow: 0 15px 28px rgba(255, 192, 203, 0.7), 0 10px 10px rgba(255, 192, 203, 0.7)
+    &:hover
+        transform: scale(1.05)
+        border-color: pink
+    & .fa-heart
+        position: absolute
+        animation: grow 0.6s linear
+        transform: translate(-50%, -50%) scale(0)
 
-iframe, img, svg, video
-    max-width: 100%
-    vertical-align: top
-    height: auto
-
-p
-    margin: 0
-
-ul
-    margin: 0
-    padding-left: 0
-
-li
-    list-style-type: none
-
-a
-    text-decoration: none
+@keyframes grow
+    to 
+        transform: translate(-50%, -50%) scale(10)
+        opacity: 0
